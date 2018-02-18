@@ -68,13 +68,22 @@ postfixadmin:
 
 https://github.com/hardware/mailserver/wiki/Postfixadmin-initial-configuration
 
-### How to run (on Ubuntu)
+### How to run
+
+1. Install `docker-compose`
+2. `git clone https://github.com/naoi/postfixadmin.git`
+3. `cd postfixadmin`
+4. `vi docker-compose.yml # Modify this file with your systems environment`
+5. `docker-compose up` _OR_ `docker-compose up -d # Daemon mode`
+6. `docker-compose down # for stop`
+
+### How to run (on **Ubuntu** as a service)
 
 1. `apt -y install git docker-compose`
 2. `git clone https://github.com/naoi/postfixadmin.git`
 3. `cd postfixadmin`
 4. `cp ./etc/systemd/system/postfixadmin.service /etc/systemd/system/postfixadmin.service`
 5. `cp ./etc/systemd/system/postfixadmin-start.service /etc/systemd/system/postfixadmin.service-start`
-6. `vi docker-compose.yml` (Modify this file with your systems environment)
-7. `docker-compose up`
-8. `sudo service postfixadmin start`
+6. `vi docker-compose.yml # Modify this file with your systems environment`
+7. `sudo service postfixadmin start # for start`
+8. `sudo service postfixadmin stop # for stop`
