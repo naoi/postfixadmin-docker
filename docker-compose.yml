@@ -1,5 +1,5 @@
 postfixadmin:
-  image: naoi/postfixadmin
+  image: naoi/postfixadmin-docker
   container_name: postfixadmin
   domainname: YOUR_DOMAIN_NAME
   hostname: postfixadmin
